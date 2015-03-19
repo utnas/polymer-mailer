@@ -6,7 +6,7 @@
     <section class="fit-borders">
       <ul>
         <li>
-          <a href="">New Email</a>
+          <a href="" class="btn btn-danger">New Email</a>
         </li>
         <br/>
         <template id="folders-list" repeat="{{ item in items }}">
@@ -19,7 +19,7 @@
   </template>
   <script>
     (function () {
-      // Should get data from API
+      // Should get data from the API
       Polymer({
         ready: function () {
           this.items = [
