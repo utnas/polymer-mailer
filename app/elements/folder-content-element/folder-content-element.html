@@ -2,20 +2,28 @@
 
 <polymer-element name="folder-content-element" attributes="">
   <template>
-    <link rel="stylesheet" href="styles/folder-content-element.css">
-    <table>
+    <link rel="stylesheet" href="styles/style.css">
+    <table class="table table-hover table-striped spacer">
+      <thead>
       <tr>
-        <th>From</th>
-        <th>To</th>
-        <th>Subject</th>
-        <th>Date</th>
+        <th></th>
+        <th class="from"><a>From</a></th>
+        <th class="to"><a>To</a></th>
+        <th class="subject"><a>Subject</a></th>
+        <th class="date"><a>Date</a></th>
       </tr>
-      <tr>
-        <td>Peter</td>
-        <td>Lois</td>
-        <td>So true</td>
-        <td>2015-03-19:2:20am</td>
-      </tr>
+      </thead>
+      <tbody>
+      <template id="emails-list" repeat="{{ email in emails }}">
+        <tr>
+          <td><label><input type="checkbox"></label></td>
+          <td>{{ email.from }}</td>
+          <td>{{ email.to }}</td>
+          <td>{{ email.subject }}</td>
+          <td>{{email.date}}</td>
+        </tr>
+      </template>
+      </tbody>
     </table>
   </template>
   <script src="js/folder-content.js"></script>

@@ -2,10 +2,19 @@
 
 <polymer-element name="search-element" attributes="">
   <template>
-    <link rel="stylesheet" href="styles/search-element.css">
-    <div class="fit-borders">
-      <input type="text" class="text-box" placeholder="Find an email...">
-      <!--button class="btn btn-default" onclick="eraseSearch()"></button-->
+    <link rel="stylesheet" href="styles/style.css">
+    <div class="spacer input-group">
+      <div class="input-group-addon">
+        <span class="glyphicon glyphicon-search"></span>
+      </div>
+
+      <input type="text" class="form-control" placeholder="Find an email...">
+
+      <div class="input-group-btn">
+        <button class="btn btn-default" onclick="eraseSearch()">
+          <span class="glyphicon glyphicon-remove"></span>
+        </button>
+      </div>
     </div>
   </template>
   <script style="text/javascript" src="js/search.js">

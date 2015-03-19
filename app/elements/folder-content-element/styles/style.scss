@@ -1,0 +1,9 @@
+$iconSpritePath: '/images/glyphicons-halflings.png';
+@import '../../../../bower_components/bootstrap/dist/css/bootstrap.css';
+:host {
+  display: block;
+}
+
+th {
+  cursor: pointer;
+}

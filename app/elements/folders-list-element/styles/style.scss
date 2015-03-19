@@ -1,0 +1,23 @@
+$iconSpritePath: '/images/glyphicons-halflings.png';
+@import '../../../../bower_components/bootstrap/dist/css/bootstrap.css';
+:host {
+  display: block;
+}
+
+.fit-borders {
+  padding-left: 6%;
+  padding-right: 4%;
+}
+
+.vertical-line {
+  border-right: 1px dotted #ddd;
+}
+
+.spacer {
+  margin-top: 20px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+

@@ -13,11 +13,30 @@
 
 <body unresolved fullbleed layout vertical>
 <template is="auto-binding" id="app">
-  <header-element></header-element>
-  <search-element></search-element>
 
-  <folders-list-element></folders-list-element>
-  <folder-content-element></folder-content-element>
+  <section class="fit-borders">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <header-element></header-element>
+        <search-element></search-element>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-2 vertical-line">
+            <folders-list-element></folders-list-element>
+          </div>
+          <div class="col-xs-12 col-sm-10">
+            <folder-content-element></folder-content-element>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="vertical-line"></div>
 </template>

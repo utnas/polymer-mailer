@@ -11,6 +11,10 @@
         'Archives',
         'Smart Box'
       ];
+    },
+
+    addEmail: function () {
+      console.log("Add an email, not yet implemented");
     }
   });
 })();

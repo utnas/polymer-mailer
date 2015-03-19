@@ -1,3 +1,6 @@
+$iconSpritePath: '/images/glyphicons-halflings.png';
+@import '../../bower_components/bootstrap/dist/css/bootstrap.css';
+
 html {
   font-size: 62.5%;
 }
@@ -14,15 +17,11 @@ body {
   border-right: 1px dotted #ddd;
 }
 
-.a {
+a {
   cursor: pointer;
 }
 
-.a:active, a:hover {
-  outline: 0;
-}
-
-.a:hover, a:focus {
-  color: #2a6496;
-  text-decoration: underline;
+.fit-borders {
+  padding-left: 8%;
+  padding-right: 6%;
 }

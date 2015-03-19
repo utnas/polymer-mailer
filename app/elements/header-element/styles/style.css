@@ -1,0 +1,9 @@
+@import url(../../../../bower_components/bootstrap/dist/css/bootstrap.css);
+:host {
+  display: block; }
+
+.fit-borders {
+  padding-left: 8%;
+  padding-right: 6%; }
+
+/*# sourceMappingURL=style.css.map */

@@ -2,18 +2,26 @@
 
 <polymer-element name="folders-list-element" attributes="">
   <template>
-    <link rel="stylesheet" href="styles/folders-list-element.css">
+    <link rel="stylesheet" href="styles/style.css">
     <section class="fit-borders">
-      <ul>
-        <li>
-          <a href="" class="btn btn-danger">New Email</a>
-        </li>
-        <br/>
-        <template id="folders-list" repeat="{{ item in items }}">
-          <li><a href="">{{ item }}</a></li>
-          <br>
-        </template>
-      </ul>
+      <div class="spacer nav">
+        <ul class="nav nav-pills align-right">
+          <li class="nav nav-pills">
+            <a class="clickable" onclick="addEmail()">
+              <label class="clickable">
+                New Email <span class="glyphicon glyphicon-pencil"></span>
+              </label>
+            </a>
+          </li>
+          <br/>
+          <template id="folders-list" repeat="{{ item in items }}">
+            <li>
+              <a href="">{{ item }}<span class="badge alert-danger">{{0}}</span></a>
+            </li>
+            <br>
+          </template>
+        </ul>
+      </div>
     </section>
     <div class="vertical-line"></div>
   </template>
