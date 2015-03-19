@@ -1,5 +1,3 @@
-@import '../bower_components/bootstrap/dist/css/bootstrap.min.css';
-
 :host {
   display: block;
 }
@@ -7,4 +5,10 @@
 .fit-borders {
   padding-left: 8%;
   padding-right: 6%;
+}
+
+.text-font {
+  font-style: italic;
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #828282;
 }
