@@ -1,6 +1,6 @@
 {
   "firebase": "polymer-mailer",
-  "public": "app",
+  "public": "dist",
   "ignore": [
     "firebase.json",
     "**/.*",
