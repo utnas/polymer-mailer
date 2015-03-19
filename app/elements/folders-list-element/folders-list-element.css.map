@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,KAAM;EACJ,OAAO,EAAE,KAAK;;AAGhB,EAAG;EACD,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,OAAO;;AAGhB,YAAa;EACX,YAAY,EAAE,EAAE;EAChB,aAAa,EAAE,EAAE;;AAGnB,CAAE;EACA,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,UAAU;EACvB,eAAe,EAAE,IAAI;;AAGvB,gBAAiB;EACf,KAAK,EAAE,OAAO;EACd,eAAe,EAAE,SAAS;;AAG5B,cAAe;EACb,YAAY,EAAE,eAAe",
+"sources": ["folders-list-element.scss"],
+"names": [],
+"file": "folders-list-element.css"
+}

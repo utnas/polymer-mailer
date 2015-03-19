@@ -1,0 +1,36 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="folders-list-element" attributes="">
+  <template>
+    <link rel="stylesheet" href="folders-list-element.css">
+    <section class="fit-borders">
+      <ul>
+        <li>
+          <a href="">New Email</a>
+        </li>
+        <br/>
+        <template id="folders-list" repeat="{{ item in items }}">
+          <li><a href="">{{ item }}</a></li>
+          <br>
+        </template>
+      </ul>
+    </section>
+    <div class="vertical-line"></div>
+  </template>
+  <script>
+    (function () {
+      // Should get data from API
+      Polymer({
+        ready: function () {
+          this.items = [
+            'Email Box',
+            'Sents',
+            'Spams',
+            'Archives',
+            'Smart Box'
+          ];
+        }
+      });
+    })();
+  </script>
+</polymer-element>

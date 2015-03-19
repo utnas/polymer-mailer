@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+li {
+  list-style: none;
+  color: #2a6496;
+}
+
+.fit-borders {
+  padding-left: 6%;
+  padding-right: 4%;
+}
+
+a {
+  color: #2a6496;
+  font-size: 14px;
+  line-height: 1.42857143;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #2a6496;
+  text-decoration: underline;
+}
+
+.vertical-line {
+  border-right: 1px dotted #ddd;
+}
