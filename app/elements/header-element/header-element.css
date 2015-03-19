@@ -1,4 +1,12 @@
+@import url(../bower_components/bootstrap/dist/css/bootstrap.min.css);
+
 :host {
-  display: block; }
+  display: block;
+}
+
+.fit-borders {
+  padding-left: 8%;
+  padding-right: 6%;
+}
 
 /*# sourceMappingURL=header-element.css.map */
