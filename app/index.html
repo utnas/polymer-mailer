@@ -6,19 +6,17 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>poly foo</title>
-  <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild-->
-  <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->
   <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-  <!-- endbuild -->
-  <!-- will be replaced with elements/elements.vulcanized.html -->
   <link rel="import" href="elements/elements.html">
-  <!-- endreplace-->
 </head>
 
 <body unresolved fullbleed layout vertical>
 <template is="auto-binding" id="app">
+
+  <style>
+    @import '../bower_components/bootstrap/dist/css/bootstrap.min.css';
+  </style>
 
   <core-drawer-panel>
     <!-- Drawer -->
@@ -50,9 +48,7 @@
 
   </core-drawer-panel>
 </template>
-<!-- build:js scripts/app.js -->
 <script src="scripts/app.js"></script>
-<!-- endbuild-->
 </body>
 
 </html>
