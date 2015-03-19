@@ -1,0 +1,21 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="search-element" attributes="">
+  <template>
+    <link rel="stylesheet" href="search-element.css">
+    <div class="fit-borders">
+      <input type="text" class="text-box" placeholder="Find an email...">
+      <!--button class="btn btn-default" onclick="eraseSearch()"-->
+      </button>
+    </div>
+  </template>
+  <script>
+    (function () {
+      Polymer({
+        eraseSearch: function () {
+          console.log('Erase search field');
+        }
+      });
+    })();
+  </script>
+</polymer-element>

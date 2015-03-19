@@ -1,0 +1,33 @@
+:host {
+  display: block;
+}
+
+.fit-borders {
+  padding-left: 8%;
+  padding-right: 6%;
+}
+
+.text-box {
+  border: 1px solid #9b9b9b;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  outline: 0;
+  height: 30px;
+  width: 80%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10%;
+  transition: 500ms all ease;
+}
+
+.text-box:hover {
+  width: 100%;
+  margin-left: 0;
+  border: 1px solid #208fd9;
+}
+
+.text-font{
+  font-style: italic;
+}
+
