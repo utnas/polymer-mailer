@@ -2,7 +2,7 @@
 
 <polymer-element name="folders-list-element" attributes="">
   <template>
-    <link rel="stylesheet" href="folders-list-element.css">
+    <link rel="stylesheet" href="styles/folders-list-element.css">
     <section class="fit-borders">
       <ul>
         <li>
@@ -17,20 +17,6 @@
     </section>
     <div class="vertical-line"></div>
   </template>
-  <script>
-    (function () {
-      // Should get data from the API
-      Polymer({
-        ready: function () {
-          this.items = [
-            'Email Box',
-            'Sent',
-            'Spams',
-            'Archives',
-            'Smart Box'
-          ];
-        }
-      });
-    })();
+  <script src="js/folders.js">
   </script>
 </polymer-element>
