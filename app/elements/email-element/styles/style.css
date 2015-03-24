@@ -1,0 +1,8 @@
+@import url(../../../../bower_components/bootstrap/dist/css/bootstrap.css);
+:host {
+  display: block; }
+
+th, td {
+  cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

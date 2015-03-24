@@ -19,7 +19,7 @@
 <body unresolved fullbleed layout vertical>
 <template is="auto-binding" id="app">
 
-  <section class="fit-borders">
+  <section id="header" class="fit-borders">
     <div class="row">
       <div class="col-xs-12 col-sm-12">
         <header-element></header-element>
@@ -28,22 +28,39 @@
     </div>
   </section>
 
-  <section>
+  <section id="folder-and-content">
     <div class="container">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xs-12 col-sm-2 vertical-line">
-            <folders-list-element></folders-list-element>
-          </div>
-          <div class="col-xs-12 col-sm-10">
-            <folder-content-element></folder-content-element>
-          </div>
+
+          <section id="folders-list-element">
+            <div class="col-xs-12 col-sm-2 vertical-line">
+              <folders-list-element></folders-list-element>
+            </div>
+          </section>
+
+          <div class="vertical-line"></div>
+
+          <section id="folder-content">
+            <div class="col-xs-12 col-sm-10">
+              <section id="folder-content-element">
+                <folder-content-element></folder-content-element>
+              </section>
+
+              <section id="email-element">
+                <email-element></email-element>
+              </section>
+            </div>
+          </section>
+
         </div>
       </div>
     </div>
   </section>
+  <section id="email-content">
 
-  <div class="vertical-line"></div>
+  </section>
+
 </template>
 
 <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->

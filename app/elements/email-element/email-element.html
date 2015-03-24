@@ -1,0 +1,20 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="email-element" attributes="">
+  <template>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <div class="well"><h1>{{email.subject}}</h1>
+
+      <p><label>Id:</label><span>{{email.id}}</span></p>
+
+      <p><label>From: </label><span>{{email.from}}</span></p>
+
+      <p><label>To: </label><span>{{email.to}}</span></p>
+
+      <p><label>Date: </label><span>{{email.date'}}</span></p></div>
+    <p>{{email.content}}</p>
+
+  </template>
+  <script src="js/email.js"></script>
+</polymer-element>
