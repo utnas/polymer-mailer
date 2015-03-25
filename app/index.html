@@ -22,31 +22,9 @@
 </head>
 
 <body unresolved fullbleed>
+
 <template is="auto-binding" id="app">
-
   <core-scaffold id="scaffold" name="" fit>
-
-    <!-- left menu -->
-    <core-header-panel navigation mode="seemed" flex="">
-      <nav>
-        <core-toolbar><span>Single Page Polymer</span></core-toolbar>
-
-        <core-menu selected="0">
-          <paper-item noink>
-            <core-icon icon="label-outline"></core-icon>
-            <a href="#single">Single</a>
-          </paper-item>
-          <paper-item noink>
-            <core-icon icon="label-outline"></core-icon>
-            <a href="#page">page</a>
-          </paper-item>
-          <paper-item noink>
-            <core-icon icon="label-outline"></core-icon>
-            <a href="#app">App</a>
-          </paper-item>
-        </core-menu>
-      </nav>
-    </core-header-panel>
 
     <!-- center tool bar -->
     <core-toolbar tool flex>
@@ -55,22 +33,35 @@
       <core-icon-button icon="add"></core-icon-button>
     </core-toolbar>
 
+    <!-- left menu -->
+    <core-header-panel navigation mode="seemed" flex="">
+      <nav>
+        <core-toolbar><span>SPA with Polymer</span></core-toolbar>
+
+        <core-menu valueattr="hash" selected="{{route}}">
+          <template repeat="{{page in pages}}">
+            <paper-item hash="{{page.hash}}" noink>
+              <core-icon icon="label-outline"></core-icon>
+              <a href="#{{page.hash}}">{{page.name}}</a>
+            </paper-item>
+          </template>
+        </core-menu>
+
+      </nav>
+    </core-header-panel>
+
     <!-- main content -->
     <div layout horizontal center-center fit>
-      <core-animated-pages selected="0" transitions="slide-from-right">
-        <section layout vertical center-center>
-          <div>Single</div>
-        </section>
-        <section layout vertical center-center>
-          <div>page</div>
-        </section>
-        ...
+      <core-animated-pages valueattr="hash" selected="{{route}}" transitions="slide-from-right">
+        <template repeat="{{page in pages}}">
+          <section hash="{{page.hash}}" layout vertical center-center>
+            <div>{{page.name}}</div>
+          </section>
+        </template>
       </core-animated-pages>
     </div>
 
   </core-scaffold>
-  </body>
-
 </template>
 
 <!-- build:js scripts/app.js -->
