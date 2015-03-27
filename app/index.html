@@ -24,7 +24,7 @@
 <body unresolved fullbleed>
 
 <template is="auto-binding" id="app">
-  <core-scaffold id="scaffold" name="" fit>
+  <core-scaffold id="scaffold" name="scafold" fit>
 
     <!-- center tool bar -->
     <core-toolbar tool flex>
@@ -39,10 +39,10 @@
         <core-toolbar><span>SPA with Polymer</span></core-toolbar>
 
         <core-menu valueattr="hash" selected="{{route}}">
-          <template repeat="{{page in pages}}">
-            <paper-item hash="{{page.hash}}" noink>
+          <template repeat="{{folder in folders}}">
+            <paper-item hash="{{folder.label}}" noink>
               <core-icon icon="label-outline"></core-icon>
-              <a href="#{{page.hash}}">{{page.name}}</a>
+              <a href="#{{folder.value}}">{{folder.label}}</a>
             </paper-item>
           </template>
         </core-menu>
@@ -53,9 +53,9 @@
     <!-- main content -->
     <div layout horizontal center-center fit>
       <core-animated-pages valueattr="hash" selected="{{route}}" transitions="slide-from-right">
-        <template repeat="{{page in pages}}">
-          <section hash="{{page.hash}}" layout vertical center-center>
-            <div>{{page.name}}</div>
+        <template id="folders" repeat="{{email in folders.folders}}">
+          <section hash="{{email.subject}}" layout vertical center-center>
+            <div>{{email.subject}}</div>
           </section>
         </template>
       </core-animated-pages>
