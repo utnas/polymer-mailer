@@ -204,6 +204,10 @@
     }
   ];
 
+  /*******************
+   * Core functions
+   *******************/
+
   function getNextEmailId() {
     var lastGreatId = 0;
     folders.forEach(function (item) {
@@ -223,16 +227,26 @@
   });
 
   var mailer = document.querySelector('template[is="auto-binding"]'),
-    script = document.createElement("script"),
-    DEFAULT_ROUTE = 'single';
+    DEFAULT_ROUTE = 'single',
+    CURRENT_ROUTE = {};
 
   mailer.addEventListener('template-bound', function (e) {
-    // Use URL hash for initial route. Otherwise, use the first page.
     this.route = this.route || DEFAULT_ROUTE;
+    CURRENT_ROUTE = document.querySelector('template[id="folder"]');
+
+    //Get list of folders
+    mailer.folders = api.getFolders();
+
+    console.log(CURRENT_ROUTE);
+    if (CURRENT_ROUTE !== '') {
+      var selectedFolder = api.getFolder(this.$.folder);
+      if (selectedFolder) {
+        mailer.selectedFolder = selectedFolder;
+      } else {
+        console.log('No folder selected');
+      }
+      console.dir(mailer.selectedFolder);
+    }
   });
-
-  //Get list of folders
-  mailer.folders = api.getFolders();
-
 
 })(wrap(document));

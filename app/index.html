@@ -39,10 +39,10 @@
         <core-toolbar><span>SPA with Polymer</span></core-toolbar>
 
         <core-menu valueattr="hash" selected="{{route}}">
-          <template repeat="{{folder in folders}}">
+          <template id='folder' repeat="{{folder in folders}}">
             <paper-item hash="{{folder.label}}" noink>
               <core-icon icon="label-outline"></core-icon>
-              <a href="#{{folder.value}}">{{folder.label}}</a>
+              <a id="selectedFolder" href="#{{folder.value}}">{{folder.label}}</a>
             </paper-item>
           </template>
         </core-menu>
